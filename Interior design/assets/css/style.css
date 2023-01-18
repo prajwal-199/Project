@@ -1,0 +1,1486 @@
+@import url('https://fonts.googleapis.com/css2?family=Libre+Franklin&display=swap');
+
+:root {
+    --pri-clr: #afa783;
+    --sec-clr: #e4e4e4;
+    --white: #fefefe;
+    --black: #000000;
+    --text-1: #afa783;
+    --text-2: #ebe6d0;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+    font-family: 'Libre Franklin', sans-serif;
+}
+
+.xxl-txt {
+    font-size: 5.5rem;
+    padding: 1.5rem 0;
+    font-weight: bold;
+}
+
+.xl-txt {
+    font-size: 4.5rem;
+    padding: 1.5rem 0;
+    font-weight: bold;
+}
+
+.large-txt {
+    font-size: 2rem;
+    padding: 1.5rem 0;
+    font-weight: bold;
+}
+
+.small-txt {
+    font-size: 1.7rem;
+    line-height: 2.8rem;
+}
+
+.btn {
+    font-size: 1.8rem;
+    padding: 1.5rem 5rem;
+    border-radius: 50px;
+    border: none;
+    background-color: var(--pri-clr);
+    color: white;
+    font-weight: 400;
+    letter-spacing: 2px;
+    cursor: pointer;
+    display: block;
+    margin: 3rem auto 0;
+}
+
+.btn:hover {
+    background-color: var(--black);
+}
+
+/* navigation */
+
+ .navbar{
+    width: 70%;
+    height: 10vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 auto;
+}
+
+.logo {
+    height: 70%;
+}
+
+.logo img {
+    width: 100%;
+    height: 100%;
+}
+
+.nav-items>ul {
+    display: flex;
+    gap: 20px;
+    font-size: 1.8rem;
+    list-style-type: none;
+}
+
+.nav-items>ul>li>a {
+    text-decoration: none;
+    position: relative;
+    color: var(--pri-clr);
+}
+
+.nav-items>ul>li>a::after {
+    content: "";
+    width: 100%;
+    height: 3px;
+    background-color: #a2a6af;
+    position: absolute;
+    bottom: -3px;
+    left: 0;
+    transform: scaleX(0);
+    transition: transform 0.5s;
+}
+
+.nav-items>ul>li>a:hover::after {
+    transform: scaleX(1);
+}
+
+.mobile-navbar-btn{
+    font-size: 2.5rem;
+    display: none;
+    cursor: pointer;
+}
+.mobile-navbar-btn .close-btn{
+    display: none;
+}
+
+.active .nav-items>ul{
+    transform: translateX(0);
+    visibility: visible;
+}
+.active .mobile-navbar-btn .menu-btn{
+    display: none;
+}
+.active .mobile-navbar-btn .close-btn{
+    display: block;
+}
+
+/* hero section */
+
+.hero-sec {
+    height: 100vh;
+    background: linear-gradient(var(--white) 20%, var(--sec-clr) 20%);
+    padding: 10rem 0;
+}
+
+.hero-img-tagline {
+    width: 55%;
+    height: 75%;
+    margin: 0 auto;
+    position: relative;
+    z-index: 999;
+}
+
+.hero-img-tagline::after {
+    content: '';
+    width: 27%;
+    height: 130%;
+    background-color: var(--pri-clr);
+    position: absolute;
+    right: -80px;
+    bottom: -20%;
+    z-index: -1;
+}
+
+.hero-img-tagline img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.tag-line {
+    width: 60%;
+    background-color: var(--white);
+    padding: 4rem;
+    position: absolute;
+    bottom: -40%;
+    left: -10%;
+}
+
+.tag-line p:first-child {
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.tag-line p:nth-child(2) {
+    margin-top: 1.5rem;
+    font-weight: bold;
+    color: var(--pri-clr);
+}
+
+/* Services sec */
+
+.our-services-sec {
+    display: flex;
+    align-items: center;
+    background-color: var(--pri-clr);
+}
+
+.our-services-container {
+    display: flex;
+    justify-content: center;
+    align-items: baseline;
+    gap: 1rem;
+}
+
+.our-services-content {
+    width: 20%;
+    padding: 3rem;
+    color: var(--white);
+}
+
+/* Design Services Sec */
+
+.design-services-sec {
+    min-height: 150vh;
+    background: linear-gradient(var(--sec-clr) 40%, var(--pri-clr) 40% 60%, var(--sec-clr) 60%);
+    padding-bottom: 5rem;
+}
+
+.design-services-sec-heading {
+    text-align: center;
+    padding-top: 10rem;
+}
+
+.design-services-sec-heading p:first-child {
+    color: var(--pri-clr);
+}
+
+.light-bg {
+    height: 75%;
+    background-color: var(--white);
+    text-align: center;
+    padding: 2rem 3rem;
+    color: black;
+}
+
+.dark-bg {
+    height: 75%;
+    background-color: var(--black);
+    text-align: center;
+    padding: 2rem 3rem;
+    color: white;
+}
+
+.plans-product-div-1,
+.plans-product-div-2 {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(10rem, 30rem));
+    grid-template-rows: 45rem;
+    justify-content: center;
+    align-items: stretch;
+    gap: 3rem;
+    margin: 3rem 0;
+}
+
+.plans-product-div-1 div:first-child,
+.plans-product-div-1 div:last-child {
+    margin-top: auto;
+}
+
+.plans-product-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.other-link-light-bg {
+    font-size: 1.8rem;
+    color: black;
+    text-decoration: none;
+    display: inline-block;
+    margin-top: 2rem;
+    position: relative;
+}
+
+.other-link-dark-bg {
+    font-size: 1.8rem;
+    color: white;
+    text-decoration: none;
+    display: inline-block;
+    margin-top: 2rem;
+    position: relative;
+}
+
+.other-link-dark-bg:after,
+.other-link-light-bg:after {
+    content: '';
+    width: 100%;
+    height: 2px;
+    background-color: red;
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    transform: scaleX(0);
+    transform-origin: right;
+    transition: transform 0.5s;
+}
+
+.other-link-dark-bg:hover::after,
+.other-link-light-bg:hover::after {
+    transform: scaleX(1);
+    transform-origin: left;
+}
+
+.light-italic {
+    font-style: italic;
+}
+
+.dark-italic {
+    color: rgb(196, 193, 193);
+    font-style: italic;
+}
+
+/* About Sec */
+
+.about-sec {
+    min-height: 60vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10rem;
+    background-color: var(--pri-clr);
+}
+
+.about-decorators {
+    width: 25%;
+}
+
+.about-decorators p:first-child {
+    color: var(--white);
+    opacity: 0.6;
+}
+
+.about-decorators p:last-child {
+    color: var(--white);
+}
+
+.divider {
+    width: 100%;
+    height: 1.8rem;
+    background-color: var(--white);
+    opacity: 0.3;
+    margin: 4rem 0;
+}
+
+.about-comments {
+    width: 30%;
+    height: 80%;
+    padding: 10rem 3rem;
+    background-color: var(--white);
+    position: relative;
+    font-size: 2rem;
+    z-index: 3;
+    line-height: 3.5rem;
+}
+
+.about-comments img {
+    position: absolute;
+    top: 15%;
+    right: 2%;
+    z-index: -1;
+    opacity: 0.5;
+    max-height: 20%;
+}
+
+/* Creative Design Sec */
+
+.creative-design-sec {
+    height: 100vh;
+    background: linear-gradient(#f7f6f1 40%, var(--white) 40%);
+    padding-top: 10rem;
+}
+
+.creative-design-tagline-sec {
+    width: 55%;
+    height: 70%;
+    margin: 0 auto;
+    position: relative;
+    z-index: 999;
+}
+
+.creative-design-tagline-sec::after {
+    content: '';
+    width: 120%;
+    height: 50%;
+    background-color: var(--pri-clr);
+    position: absolute;
+    right: -10%;
+    bottom: -15%;
+    z-index: -1;
+}
+
+.creative-design-tagline-sec img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.creative-design-tagline {
+    width: 80%;
+    background-color: var(--white);
+    position: absolute;
+    bottom: -30%;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+    padding: 2rem 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+.creative-design-tagline p:first-child {
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.creative-design-tagline p:last-child {
+    color: var(--pri-clr);
+}
+
+/* Design and Planning sec */
+
+.design-planning {
+    height: 110vh;
+    background-color: var(--sec-clr);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10rem;
+}
+
+.design-planning-cont-1 {
+    width: 40%;
+    height: 70%;
+}
+
+.design-img-1 {
+    width: 70%;
+}
+
+.design-img-1 img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.design-planning p {
+    margin-top: 3rem;
+    width: 70%;
+    letter-spacing: 2px;
+}
+
+.planning-content p:first-child {
+    color: var(--pri-clr);
+}
+
+.design-planning-cont-2 {
+    width: 40%;
+    height: 70%;
+}
+
+.img-dots-cont-2 {
+    position: relative;
+    z-index: 999;
+}
+
+.design-img-2 {
+    width: 55%;
+}
+
+.design-img-2 img {
+    width: 100%;
+    border-radius: 50%;
+    margin-top: 10%;
+}
+
+.polka-dots-bg {
+    width: 60%;
+    height: 90%;
+    position: absolute;
+    top: 0;
+    right: 50%;
+    transform: translateX(50%);
+    z-index: -1;
+}
+
+.polka-dots-bg img {
+    width: 100%;
+    height: 100%;
+}
+
+.design-planning-cont-2 .btn {
+    margin: 3rem 0 0 0;
+}
+
+/* Luxury Interior Design sec */
+
+.luxury-design-sec {
+    min-height: 60vh;
+    background-color: var(--pri-clr);
+}
+
+.luxury-design-sec>p {
+    padding: 4rem 0;
+    margin: 0;
+    text-align: center;
+    color: var(--white);
+    opacity: 0.6;
+}
+
+.services-process {
+    display: grid;
+    grid-template-columns: 30% 30%;
+    justify-content: center;
+    align-items: center;
+    gap: 5rem;
+    color: white;
+}
+
+.services-process>div p:first-child {
+    opacity: 0.6;
+}
+
+.design-services {
+    text-align: right;
+}
+
+.white-btn {
+    color: var(--pri-clr);
+    background-color: white;
+    font-weight: bold;
+}
+
+.white-btn:hover {
+    color: white;
+}
+
+/* Design Studio Sec */
+
+.design-studio-sec {
+    min-height: 110vh;
+    background: linear-gradient(var(--pri-clr)75%, white 20%);
+    padding-top: 7rem;
+}
+
+.design-studio-sec>p {
+    width: 60%;
+    text-align: center;
+    margin: 0 auto;
+    color: white;
+    opacity: 0.6;
+}
+
+.number-counter {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 3rem;
+    margin-top: 5rem;
+    position: relative;
+    z-index: 999;
+}
+
+.counter-box {
+    width: 12%;
+    padding: 5rem 0;
+    text-align: center;
+    background-color: white;
+}
+
+.number-counter>div p:first-child {
+    text-transform: uppercase;
+    color: #6e6e6e;
+}
+
+.number-counter>div p:nth-child(2) {
+    color: var(--text-1);
+    margin-bottom: 3rem;
+}
+
+.counter-img {
+    position: absolute;
+    z-index: -1;
+    width: 60%;
+    top: 70%;
+}
+
+.counter-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.design-studio-sec button {
+    display: block;
+    margin-top: 22%;
+    text-align: center;
+    font-weight: bold;
+}
+
+/* Contact US sec */
+
+.contact-us-sec {
+    min-height: 80vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.8rem;
+    margin-top: 2rem;
+}
+
+.contact-form {
+    width: 30%;
+    margin: 0 auto;
+}
+
+.contact-form p {
+    text-align: center;
+    color: var(--pri-clr);
+    margin-bottom: 4rem;
+}
+
+.contact-form>.form>input,
+.contact-form>.form>textarea {
+    display: block;
+    border: none;
+    border-bottom: 2px solid black;
+    width: 100%;
+    padding: 1rem;
+    margin: 1.5rem 0;
+}
+
+.contact-form>.form>input[placeholder] {
+    font-size: 1.8rem;
+}
+
+.contact-form button {
+    width: 100%;
+}
+
+.contact-img {
+    width: 35%;
+    height: 100%;
+    margin-right: auto;
+}
+
+.contact-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Contact Info Sec */
+
+.contact-info-sec {
+    height: 30vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 3rem;
+    color: white;
+}
+
+.contact-info-box {
+    width: 25%;
+    height: 60%;
+    background-color: var(--pri-clr);
+    border-radius: 20px;
+    padding: 2rem;
+}
+
+.contact-info-box a {
+    text-decoration: none;
+    color: white;
+    display: block;
+}
+
+/* Footer */
+
+footer {
+    height: 30vh;
+    background-color: #2f3542;
+}
+
+.footer-cont {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 3rem;
+}
+
+.footer-cont>div {
+    height: 50%;
+    margin: auto 0;
+}
+
+.footer-cont>div>p {
+    position: relative;
+    font-size: 3rem;
+    font-weight: bold;
+    margin-bottom: 2rem;
+    color: #a4b0be;
+}
+
+.footer-cont>div>p::after {
+    content: "";
+    width: 5rem;
+    height: 3px;
+    background-color: #a4b0be;
+    position: absolute;
+    left: 0;
+    bottom: -5px;
+}
+
+.quick-links>ul>li {
+    margin-top: 1rem;
+    list-style-type: none;
+}
+
+.quick-links>ul>li>a {
+    font-size: 1.9rem;
+    text-decoration: none;
+    color: #a4b0be;
+}
+
+.social-links i {
+    font-size: 2.5rem;
+    margin: 2rem 2rem 0 0;
+    padding: 2rem;
+    border-radius: 50%;
+    cursor: pointer;
+    color: #2d3436;
+    background-color: white;
+}
+
+.social-links .fa-facebook:hover {
+    color: #ffffff;
+    background-color: #3867d6;
+}
+
+.social-links .fa-twitter:hover {
+    color: #ffffff;
+    background-color: #2d98da;
+}
+
+.social-links .fa-instagram:hover {
+    color: #ffffff;
+    background: linear-gradient(#8854d0, #eb3b5a, #fd9644);
+}
+
+@media screen and (width <= 480px) {
+
+    html{
+        overflow-x: hidden;
+    }
+    body{
+        overflow-x: hidden;
+    }
+    .xxl-txt {
+        font-size: 4.5rem;
+        padding: 1rem 0;
+        font-weight: bold;
+    }
+
+    .xl-txt {
+        font-size: 3.8rem;
+        padding: 1rem 0;
+        font-weight: bold;
+    }
+
+    .large-txt {
+        font-size: 2.2rem;
+        padding: 1rem 0;
+        font-weight: bold;
+    }
+
+    .small-txt {
+        font-size: 1.8rem;
+        padding: 1rem 0;
+        line-height: 2.8rem;
+    }
+
+    /* navigation */
+
+    header{
+        position: relative;
+    }
+    .navbar {
+        width: 90%;
+    }
+
+    .nav-items>ul{
+        width: 100%;
+        height: 100vh;
+        position: absolute;
+        left: 0;
+        top: 0;
+        display: flex;
+        justify-content: center;
+        background-color: var(--sec-clr);
+        align-items: center;
+        flex-direction: column;
+        transform: translateX(100%);
+        transition: all 0.5s;
+        visibility: hidden;
+        z-index: 1000;
+    }
+
+    .nav-items>ul>li{
+        margin: 1rem 0;
+    }
+
+    .mobile-navbar-btn{
+        display: block;
+        z-index: 1000;
+    }
+
+    /* hero section */
+
+    .hero-sec {
+        height: 70vh;
+        padding: 7rem 0;
+    }
+
+    .hero-img-tagline {
+        width: 80%;
+        height: 40%;
+    }
+
+    .hero-img-tagline::after {
+        width: 70%;
+        height: 130%;
+        right: -10px;
+        bottom: -10%;
+    }
+
+    .tag-line {
+        width: 110%;
+        bottom: -150%;
+        left: -5%;
+        padding: 2rem;
+        overflow-wrap: break-word;
+    }
+
+    /* Services sec */
+
+    .our-services-container {
+        display: block;
+    }
+
+    .our-services-content {
+        width: 80%;
+        margin-inline: auto;
+    }
+
+    /* Design Services Sec */
+
+    .design-services-sec {
+        background: linear-gradient(var(--sec-clr) 20%, var(--pri-clr) 20% 90%, var(--sec-clr) 90%);
+    }
+
+    .design-services-sec-heading {
+        padding-top: 4rem;
+        width: 80%;
+        margin-inline: auto;
+    }
+
+    .plans-product-div-1,
+    .plans-product-div-2 {
+        width: 85%;
+        margin: 0 auto;
+        display: block;
+    }
+
+    .plans-product-div-1>div,
+    .plans-product-div-2>div {
+        margin: 3rem 0;
+    }
+
+    /* About Sec */
+
+    .about-sec {
+        display: block;
+        padding: 5rem 0;
+    }
+
+    .about-decorators,
+    .about-comments {
+        width: 80%;
+        margin: 0 auto;
+    }
+
+    .about-comments {
+        margin-top: 2rem;
+        padding-bottom: 3rem;
+    }
+
+    /* Creative Design Sec */
+
+    .creative-design-sec {
+        height: 70vh;
+        padding: 5rem 0;
+    }
+    .creative-design-tagline-sec {
+        width: 80%;
+        height: 50%;
+    }
+    .creative-design-tagline{
+        width: 100%;
+        bottom: -100%;
+        overflow-wrap: break-word;
+    }
+
+    /* Design and Planning sec */
+
+    .design-planning {
+        display: block;
+        height: max-content;
+        padding: 5rem 0;
+    }
+    
+    .design-planning-cont-1 {
+        width: 80%;
+        margin: 0 auto;
+    }
+    .design-img-1,
+    .design-planning p {
+        width: 100%;
+    }
+    .design-planning-cont-2{
+        width: 80%;
+        margin: 5rem auto 0;
+    }
+    .design-planning-cont-2 .btn{
+        margin: 3rem auto 0;
+    }
+
+    /* Luxury Interior Design sec */
+
+    .services-process{
+        display: block;
+        width: 80%;
+        margin-inline: auto;
+    }
+    .design-services,
+    .our-process{
+        text-align: center;
+    }
+
+    /* Design Studio Sec */
+
+    .design-studio-sec{
+        min-height: 150vh;
+    }
+    .design-studio-sec>p {
+        width: 80%;
+    }
+    .number-counter{
+        display: grid;
+        grid-template-columns: repeat(2, 15rem);
+        justify-content: center;
+        align-items: center;
+    }
+    .counter-box{
+        width: 100%;
+        height: 100%;
+        padding: 2.5rem 0;
+    }
+    .number-counter>div p:nth-child(2) {
+        margin-bottom: 1rem;
+    }
+    .counter-img{
+        width: 80%;
+        height: 60%;
+        left: 50%;
+        transform: translateX(-50%);
+        top: 90%;
+    }
+    .counter-img img{
+        object-position: left;
+    }
+    .design-studio-sec button {
+        margin-top: 65%;;       
+    }
+
+    /* Contact US sec */
+
+    .contact-us-sec{
+        display: block;
+    }
+    .contact-form{
+        width: 80%;
+    }
+    .contact-img {
+        width: 80%;
+        margin: 5rem auto;
+    }
+
+    /* Contact Info Sec */
+
+    .contact-info-sec{
+        height: 60vh;
+        display: block;
+        margin: 2rem 0;
+    }
+    .contact-info-box{
+        width: 80%;
+        height: 40%;
+        margin: 3rem auto;
+    }
+
+    /* Footer */
+
+    footer{
+        height: 50vh;
+        margin-top: 20rem;
+        padding: 2rem 0;
+        overflow: hidden;
+    }
+    
+    .footer-cont{
+        display: block;
+        width: 80%;
+        margin: auto;
+    }
+}
+
+@media screen and (480px <= width <=768px) {
+
+    html{
+        overflow-x: hidden;
+    }
+    body{
+        overflow-x: hidden;
+    }
+    .xxl-txt {
+        font-size: 5rem;
+        padding: 1rem 0;
+        font-weight: bold;
+    }
+
+    .xl-txt {
+        font-size: 4.1rem;
+        padding: 1rem 0;
+        font-weight: bold;
+    }
+
+    .large-txt {
+        font-size: 2.5rem;
+        padding: 1rem 0;
+        font-weight: bold;
+    }
+
+    .small-txt {
+        font-size: 1.7rem;
+        padding: 1rem 0;
+        line-height: 2.8rem;
+    }
+
+    /* navigation */
+
+    header{
+        position: relative;
+    }
+    .navbar {
+        width: 90%;
+    }
+
+    .nav-items>ul{
+        width: 100%;
+        height: 100vh;
+        position: absolute;
+        left: 0;
+        top: 0;
+        display: flex;
+        justify-content: center;
+        background-color: var(--sec-clr);
+        align-items: center;
+        flex-direction: column;
+        transform: translateX(100%);
+        transition: all 0.5s;
+        visibility: hidden;
+        z-index: 1000;
+    }
+
+    .nav-items>ul>li{
+        margin: 1rem 0;
+    }
+
+    .mobile-navbar-btn{
+        display: block;
+        z-index: 1000;
+    }
+    /* hero section */
+
+    .hero-sec {
+        overflow: hidden;
+    }
+
+    .hero-img-tagline {
+        width: 80%;
+        aspect-ratio: 1/1;
+    }
+    
+
+    .hero-img-tagline::after {
+        width: 50%;
+        height: 130%;
+        right: -7%;
+    }
+
+    .tag-line {
+        min-width: 90%;
+        bottom: -40%;
+        left: -7%;
+        overflow-wrap: break-word;
+        padding: 2rem;
+    }
+
+    /* Services sec */
+
+    .our-services-container {
+        flex-wrap: wrap;
+    }
+    
+
+    .our-services-content {
+        width: 70%;
+        margin-inline: auto;
+    }
+
+    /* Design Services Sec */
+
+    .design-services-sec {
+        background: linear-gradient(var(--sec-clr) 20%, var(--pri-clr) 20% 90%, var(--sec-clr) 90%);
+    }
+
+    .design-services-sec-heading {
+        padding-top: 4rem;
+        width: 80%;
+        margin-inline: auto;
+    }
+
+    .plans-product-div-1,
+    .plans-product-div-2 {
+        width: 85%;
+        margin: 0 auto;
+        display: block;
+    }
+
+    .plans-product-div-1>div,
+    .plans-product-div-2>div {
+        margin: 3rem 0;
+    }
+
+    /* About Sec */
+
+    .about-sec {
+        /* display: block; */
+        padding: 5rem;
+        gap: 3rem;
+    }
+
+    .about-decorators,
+    .about-comments {
+        width: 80%;
+        margin: 0 auto;
+    }
+
+    .about-comments {
+        margin-top: 2rem;
+        padding-bottom: 3rem;
+        font-size: 1.7rem;
+    }
+
+    /* Creative Design Sec */
+
+    .creative-design-sec {
+        height: 70vh;
+        padding: 5rem 0;
+    }
+    .creative-design-tagline-sec {
+        width: 80%;
+        height: 50%;
+    }
+    .creative-design-tagline{
+        width: 100%;
+        bottom: -80%;
+        overflow-wrap: break-word;
+    }
+
+    /* Design and Planning sec */
+
+    .design-planning {
+        display: block;
+        height: max-content;
+        padding: 5rem 0;
+    }
+    
+    .design-planning-cont-1 {
+        width: 80%;
+        margin: 0 auto;
+    }
+    .design-img-1,
+    .design-planning p {
+        width: 100%;
+    }
+    .design-planning-cont-2{
+        width: 80%;
+        margin: 5rem auto 0;
+    }
+    .design-planning-cont-2 .btn{
+        margin: 3rem auto 0;
+    }
+
+    /* Luxury Interior Design sec */
+
+     .services-process{
+        grid-template-columns: 40% 40%;
+    }
+
+    /* Design Studio Sec */
+
+    .design-studio-sec{
+        min-height: 130vh;
+    }
+    .design-studio-sec>p {
+        width: 80%;
+    }
+    .number-counter{
+        display: grid;
+        grid-template-columns: repeat(2, 20rem);
+        justify-content: center;
+        align-items: center;
+    }
+    .counter-box{
+        width: 100%;
+        height: 100%;
+        padding: 2.5rem 0;
+    }
+    .number-counter>div p:nth-child(2) {
+        margin-bottom: 1rem;
+    }
+    .counter-img{
+        width: 90%;
+        height: 60%;
+        left: 50%;
+        transform: translateX(-50%);
+        top: 90%;
+    }
+    .counter-img img{
+        object-position: left;
+    }
+    .design-studio-sec button {
+        margin-top: 40%;;       
+    }
+
+    /* Contact US sec */
+
+    .contact-form{
+        width: 40%;
+    }
+    .contact-img {
+        width: 50%;
+        height: 500px;
+        margin: 5rem auto;
+    }
+
+    /* Contact Info Sec */
+
+    .contact-info-sec{
+        height: 60vh;
+        margin: 2rem 0;
+    }
+    .contact-info-box{
+        width: 40%;
+        height: 35%;
+    }
+}
+
+@media screen and (768px <= width <= 1024px ) {
+    
+    /* navigation */
+
+    .navbar{
+        width: 80%;
+    }
+
+    /* hero section */
+
+    .hero-img-tagline {
+        width: 80%;
+        height: 75%;
+    }
+    .hero-img-tagline::after {
+        width: 50%;
+        height: 130%;
+        right: -60px;
+        bottom: -20%;
+    }
+    .tag-line {
+        width: 80%;
+        left: -5%;
+    }
+
+    /* Services sec */
+
+    .our-services-container{
+        gap: .8rem;
+    }
+    .our-services-content{
+        width: 30%;
+    }
+
+    /* Design Services Sec */
+
+    .design-services-sec {
+        padding-left: 3rem;
+        padding-right: 3rem;
+    }
+
+    /* About Sec */
+
+    .about-decorators {
+        width: 40%;
+    }
+    .about-comments{
+        width: 40%;
+        padding: 5rem 3rem;
+    }
+
+    /* Creative Design Sec */
+
+    .creative-design-tagline-sec {
+        width: 80%;
+        height: 70%;
+    }
+
+    /* Design and Planning sec */
+
+    .design-img-1 {
+        width: 100%;
+    }
+    .design-planning p {
+        width: 100%;
+    }
+    .design-img-2{
+        width: 80%;
+    }
+    .polka-dots-bg{
+        width: 80%;
+    }
+
+    /* Design Studio Sec */
+
+    .counter-box{
+        width: 18%;
+        padding: 3rem 0;
+    }
+    .counter-img{
+        width: 90%;
+    }
+    .design-studio-sec button {
+        margin-top: 35%;
+    }
+
+    /* Contact US sec */
+
+    .contact-form{
+        width: 40%;
+    }
+    .contact-img{
+        width: 50%;
+        height: 70%;
+    }
+
+    /* Contact Info Sec */
+
+    .contact-info-box{
+        width: 30%;
+    }
+}
+
+@media screen and (1024px <= width <= 1280px ) {
+    
+    /* navigation */
+
+    .navbar{
+        width: 80%;
+    }
+
+    /* hero section */
+
+    .hero-img-tagline {
+        width: 70%;
+        height: 75%;
+    }
+    .hero-img-tagline::after {
+        width: 30%;
+        height: 130%;
+        right: -60px;
+        bottom: -20%;
+    }
+    .tag-line {
+        width: 60%;
+        left: -5%;
+    }
+
+    /* Services sec */
+
+    .our-services-container{
+        gap: .8rem;
+    }
+    .our-services-content{
+        width: 30%;
+    }
+
+    /* Design Services Sec */
+
+    .design-services-sec {
+        padding-left: 3rem;
+        padding-right: 3rem;
+    }
+
+    /* About Sec */
+
+    .about-decorators {
+        width: 40%;
+    }
+    .about-comments{
+        width: 40%;
+        padding: 5rem 3rem;
+    }
+
+    /* Creative Design Sec */
+
+    .creative-design-tagline-sec {
+        width: 80%;
+        height: 70%;
+    }
+
+    /* Design and Planning sec */
+
+    .design-img-1 {
+        width: 100%;
+    }
+    .design-planning p {
+        width: 100%;
+    }
+    .design-img-2{
+        width: 80%;
+    }
+    .polka-dots-bg{
+        width: 80%;
+    }
+
+    /* Design Studio Sec */
+
+    .counter-box{
+        width: 18%;
+        padding: 3rem 0;
+    }
+    .counter-img{
+        width: 90%;
+    }
+    .design-studio-sec button {
+        margin-top: 35%;
+    }
+
+    /* Contact US sec */
+
+    .contact-form{
+        width: 40%;
+    }
+    .contact-img{
+        width: 50%;
+        height: 70%;
+    }
+
+    /* Contact Info Sec */
+
+    .contact-info-box{
+        width: 30%;
+    }
+}
+
